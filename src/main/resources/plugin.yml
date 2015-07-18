@@ -1,0 +1,13 @@
+name: ItemRename
+version: ${project.version}
+main: org.chaospvp.rename.ItemRename
+author: vemacs
+commands:
+  rename:
+    description: Renames an item
+    permission: itemrename.use
+    usage: /rename <name>
+permissions:
+  itemrename.use:
+    default: false
+    description: Lets you use /rename
