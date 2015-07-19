@@ -25,6 +25,10 @@ public class ItemRename extends JavaPlugin {
                     p.sendMessage(ChatColor.RED + "Renaming mob spawners is not supported.");
                     return true;
                 }
+                if (p.getItemInHand().getType() == Material.TRIPWIRE_HOOK) {
+                    p.sendMessage(ChatColor.RED + "Renaming crate keys is not supported.");
+                    return true;
+                }
                 if (p.getItemInHand().getType() != Material.AIR && p.getItemInHand().getType() != null) {
                     ItemStack item = p.getItemInHand();
                     ItemMeta meta = item.getItemMeta();
