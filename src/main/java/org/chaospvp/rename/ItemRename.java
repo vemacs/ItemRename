@@ -21,6 +21,10 @@ public class ItemRename extends JavaPlugin {
                 if (args.length == 0) {
                     return false;
                 }
+                if (p.getItemInHand().getType() == Material.MOB_SPAWNER) {
+                    p.sendMessage(ChatColor.RED + "Renaming mob spawners is not supported.");
+                    return true;
+                }
                 if (p.getItemInHand().getType() != Material.AIR && p.getItemInHand().getType() != null) {
                     ItemStack item = p.getItemInHand();
                     ItemMeta meta = item.getItemMeta();
